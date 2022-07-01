@@ -1,1 +1,1 @@
-FROM mcr.microsoft.com/dotnet-buildtools/prereqs:fedora-33-20210222183538-031e7d2
+FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04
