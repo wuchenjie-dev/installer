@@ -2,7 +2,15 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/dotnet
 {
 	"name": "Source-Build",
+
 	"image": "mcr.microsoft.com/dotnet-buildtools/prereqs:ubuntu-22.04-20220628174948-4bb185b",
+	// A completely built .NET source-tarball is >64 GB
+	"hostRequirements": {
+		"storage": "128gb"
+	},
+	"features": {
+		"github-cli": "latest"
+	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -14,11 +22,12 @@
 			]
 		}
 	},
-	// A completely built .NET source-tarball is >64 GB
-	"hostRequirements": {
-		"storage": "128gb"
-	},
-	"features": {
-		"github-cli": "latest"
-	}
+
+	// Use 'onCreateCommand' to run pre-build commands inside the codespace
+	"onCreateCommand": "${containerWorkspaceFolder}/.devcontainer/scripts/onCreateCommand.sh",
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/scripts/postCreateCommand.sh",
+
+	"workspaceFolder": "/workspaces/"
 }
