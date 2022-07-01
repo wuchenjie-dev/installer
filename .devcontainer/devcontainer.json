@@ -17,6 +17,5 @@
 	// A completely built .NET source-tarball is >64 GB
 	"hostRequirements": {
 		"storage": "128gb"
-	},
-	"remoteUser": "vscode",
+	}
 }
