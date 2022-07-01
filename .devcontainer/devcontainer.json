@@ -28,6 +28,4 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/scripts/postCreateCommand.sh",
-
-	"workspaceFolder": "{containerWorkspaceFolder}/.."
 }
