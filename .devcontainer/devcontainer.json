@@ -9,9 +9,6 @@
 	"hostRequirements": {
 		"storage": "128gb"
 	},
-	"features": {
-		"github-cli": "latest"
-	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
