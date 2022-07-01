@@ -23,11 +23,11 @@
 		}
 	},
 
-	// Use 'onCreateCommand' to run pre-build commands inside the codespace
+	// Use 'onCreateCommand' to run pre-build commands inside the codespace.
 	"onCreateCommand": "${containerWorkspaceFolder}/.devcontainer/scripts/onCreateCommand.sh",
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/scripts/postCreateCommand.sh",
 
-	"workspaceFolder": "/workspaces/"
+	"workspaceFolder": "{containerWorkspaceFolder}/.."
 }
