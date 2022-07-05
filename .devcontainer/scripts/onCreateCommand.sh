@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 # We want to always have exit code 0 so that we can use the codespace prebuild to diagnose errors.
 ./build.sh /p:ArcadeBuildTarball=true /p:TarballDir=/workspaces/dotnet-source/ /p:PreserveTarballGitFolders=true || true
 
